@@ -1,3 +1,6 @@
-export const URI="mongodb+srv://b122044:5WxHZIIA7DaSh5bm@book.zdwkf9e.mongodb.net/?retryWrites=true&w=majority&appName=Book"
+import dotenv from "dotenv"
+dotenv.config()
+
+export const URI=process.env.URI
+
 export const PORT=3001;
- // 5WxHZIIA7DaSh5bm
