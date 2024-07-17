@@ -1,4 +1,3 @@
-export const mongoDBURL="mongodb+srv://cksahoo704:6wOWeacf4lHjcN0k@cluster0.msfsscs.mongodb.net/brook?retryWrites=true&w=majority&appName=Cluster0"
+export const mongoDBURL="mongodb+srv://b122044:5WxHZIIA7DaSh5bm@book.zdwkf9e.mongodb.net/?retryWrites=true&w=majority&appName=Book"
 export const PORT=3001;
-
-// 6wOWeacf4lHjcN0k
+// 5WxHZIIA7DaSh5bm
