@@ -1,2 +1,3 @@
 *.local
-*.js
+*config.js
+*.env
