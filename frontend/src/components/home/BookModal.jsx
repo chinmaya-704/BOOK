@@ -19,8 +19,8 @@ const BookModal = ({ book, onClose }) => {
         <h2 className='w-fit px-4 py-1 bg-red-300 rounded-lg'>
           {book.publishYear}
         </h2>
-        <h4 className='my-2 text-gray-500'>{book._id}</h4>
-        <div className='flex justify-start items-center gap-x-2'>
+        {/* <h4 className='my-2 text-gray-500'>{book._id}</h4> */}
+        <div className='flex justify-start items-center gap-x-2 mt-3'>
           <PiBookOpenTextLight className='text-red-300 text-2xl' />
           <h2 className='my-1'>{book.title}</h2>
         </div>
@@ -28,14 +28,9 @@ const BookModal = ({ book, onClose }) => {
           <BiUserCircle className='text-red-300 text-2xl' />
           <h2 className='my-1'>{book.author}</h2>
         </div>
-        <p className='mt-4'>Anything You want to show</p>
+        <p className='mt-4'>Everything You want to show</p>
         <p className='my-2'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia
-          voluptatum sint. Nisi impedit libero eveniet cum vitae qui expedita
-          necessitatibus assumenda laboriosam, facilis iste cumque a pariatur
-          nesciunt cupiditate voluptas? Quis atque earum voluptate dolor nisi
-          dolorum est? Deserunt placeat cumque quo dicta architecto, dolore
-          vitae voluptate sequi repellat!
+          {book.desc}
         </p>
       </div>
     </div>

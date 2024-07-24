@@ -9,6 +9,7 @@ const Edit = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [publishYear, setPublishYear] = useState('');
+  const [desc, setDesc] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const {id} = useParams();
@@ -21,6 +22,7 @@ const Edit = () => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear)
         setTitle(response.data.title)
+        setDesc(response.data.desc)
         setLoading(false);
       }).catch((error) => {
         setLoading(false);
@@ -34,6 +36,7 @@ const Edit = () => {
       title,
       author,
       publishYear,
+      desc
     };
     setLoading(true);
     axios
@@ -52,39 +55,53 @@ const Edit = () => {
   };
 
   return (
-    <div className='p-4'>
+    <div onKeyDown={(e)=>{
+      if (e.key==='Enter')
+        handleEditBook()
+    }} className='p-4 bg-gradient-to-r from-[#2BC0E4] to-[#EAECC6] min-h-screen'>
       <BackButton />
       <h1 className='text-3xl my-4'>Edit Book</h1>
       {loading ? <Spinner /> : ''}
-      <div className='flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto'>
+      <div className='flex flex-col border-2 bg-gradient-to-r from-[#1F1C2C] to-[#6e688b] border-sky-900 rounded-xl w-[600px] p-4 mx-auto'>
         <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>Title</label>
+          <label className='text-xl mr-4 text-gray-300 '>Title</label>
           <input
             type='text'
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className='border-2 border-gray-500 px-4 py-2 w-full'
+            className=' rounded-full mt-2 px-4 py-2 w-full'
           />
         </div>
         <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>Author</label>
+          <label className='text-xl mr-4 text-gray-300 '>Author</label>
           <input
             type='text'
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
-            className='border-2 border-gray-500 px-4 py-2  w-full '
+            className=' rounded-full mt-2 px-4 py-2  w-full '
           />
         </div>
         <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>Publish Year</label>
+          <label className='text-xl mr-4 text-gray-300 '>Publish Year</label>
           <input
             type='number'
             value={publishYear}
             onChange={(e) => setPublishYear(e.target.value)}
-            className='border-2 border-gray-500 px-4 py-2  w-full '
+            className=' rounded-full mt-2 px-4 py-2  w-full '
           />
         </div>
-        <button className='p-2 bg-sky-300 m-8' onClick={handleEditBook}>
+        <div className='my-4'>
+          <label className='text-xl mr-4 text-gray-300 '>Description</label>
+          <textarea
+            type='text'
+            value={desc}
+            rows={4}
+            cols={10}
+            onChange={(e) => setDesc(e.target.value)}
+            className=' rounded-xl mt-2 px-4 py-2  w-full '
+          />
+        </div>
+        <button className='p-2 bg-amber-400 hover:bg-amber-300 hover:font-bold text-xl text-white mx-60 rounded-xl mt-2' onClick={handleEditBook}>
           Save
         </button>
       </div>

@@ -9,7 +9,8 @@ router.post('/', async (req, res) => {
     if (
       !req.body.title ||
       !req.body.author ||
-      !req.body.publishYear
+      !req.body.publishYear||
+      !req.body.desc
     ) {
       return res.status(400).send({
         message: 'Send all required fields: title, author, publishYear',
@@ -19,6 +20,7 @@ router.post('/', async (req, res) => {
       title: req.body.title,
       author: req.body.author,
       publishYear: req.body.publishYear,
+      desc:req.body.desc
     };
 
     const book = await Book.create(newBook);
@@ -65,10 +67,11 @@ router.put('/:id', async (req, res) => {
     if (
       !req.body.title ||
       !req.body.author ||
-      !req.body.publishYear
+      !req.body.publishYear||
+      !req.body.desc
     ) {
       return res.status(400).send({
-        message: 'Send all required fields: title, author, publishYear',
+        message: 'Send all required fields: title, author, publishYear and description',
       });
     }
 
