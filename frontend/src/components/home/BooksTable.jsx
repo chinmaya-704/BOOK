@@ -7,7 +7,7 @@ const BooksTable = ({ books }) => {
   return (
     <table className='w-full border-separate border-spacing-2'>
       <thead>
-        <tr>
+        <tr className='lijeva'>
           <th className='border border-slate-600 rounded-md bg-gradient-to-r from-[#1F1C2C] to-[#6e688b] text-amber-200'>S. No.</th>
           <th className='border border-slate-600 rounded-md bg-gradient-to-r from-[#1F1C2C] to-[#6e688b] text-amber-200'>Title</th>
           <th className='border border-slate-600 rounded-md max-md:hidden bg-gradient-to-r from-[#1F1C2C] to-[#6e688b] text-amber-200'>
@@ -19,7 +19,7 @@ const BooksTable = ({ books }) => {
           <th className='border border-slate-600 rounded-md bg-gradient-to-r from-[#1F1C2C] to-[#6e688b] text-amber-200'>Operations</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className='kalam'>
         {books.map((book, index) => (
           <tr key={book._id} className='h-8'>
             <td className='border border-slate-700 rounded-md text-center text-transparent from-slate-950 via-violet-900 to-black bg-gradient-to-t bg-clip-text'>

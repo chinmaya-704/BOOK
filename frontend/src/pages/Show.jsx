@@ -26,11 +26,11 @@ const Show = () => {
   return (
     <div className='p-4 bg-gradient-to-r from-[#2BC0E4] to-[#EAECC6] min-h-screen'>
       <BackButton />
-      <h1 className='text-3xl my-4'>Show Book</h1>
+      <h1 className='text-3xl my-4 sevillana'>Show Book</h1>
       {loading ? (
         <Spinner />
       ) : (
-        <div className='flex flex-col bg-gradient-to-r from-[#1F1C2C] to-[#6e688b] border-2 border-sky-900 rounded-xl w-fit p-4'>
+        <div className='kalam flex flex-col bg-gradient-to-r from-[#1F1C2C] to-[#6e688b] border-2 border-sky-900 rounded-xl w-fit p-4'>
           {/* <div className='my-4'>
             <span className='text-xl mr-4 text-gray-300'>Id:</span>
             <span className=' text-amber-300'>{book._id}</span>

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Playwrite+HR+Lijeva:wght@100..400&family=Sevillana&display=swap');
+
+
+
+.sevillana{
+   font-family: "Sevillana", cursive;
+}
+
+.kalam{
+   font-family: "Kalam", cursive;
+}
+
+.lijeva{
+   font-family: "Playwrite HR Lijeva", cursive;
+}

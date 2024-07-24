@@ -43,9 +43,9 @@ const Create = () => {
         handleSaveBook()
     }} className='p-4 bg-gradient-to-r from-[#2BC0E4] to-[#EAECC6] min-h-screen'>
       <BackButton />
-      <h1 className='text-3xl my-4'>Create Book</h1>
+      <h1 className='text-3xl my-4 sevillana'>Create Book</h1>
       {loading ? <Spinner /> : ''}
-      <div className='flex flex-col border-2 border-sky-900 bg-gradient-to-r from-[#1F1C2C] to-[#6e688b] rounded-xl w mt-2-[600px] p-4 mx-auto'>
+      <div className='kalam flex flex-col border-2 border-sky-900 bg-gradient-to-r from-[#1F1C2C] to-[#6e688b] rounded-xl w mt-2-[600px] p-4 mx-auto'>
         <div className='my-4'>
           <label className='text-xl mr-4 text-gray-300'>Title</label>
           <input

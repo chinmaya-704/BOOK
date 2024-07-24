@@ -4,6 +4,7 @@ import Create from './pages/Create'
 import Edit from './pages/Edit'
 import Delete from './pages/Delete'
 import Show from './pages/Show'
+import './App.css'
 
 function App() {
   

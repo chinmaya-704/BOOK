@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <div className='p-4 bg-gradient-to-r from-[#2BC0E4] to-[#EAECC6] min-h-screen'>
-      <div className='flex justify-center items-center gap-x-4'>
+      <div className='lijeva flex justify-center items-center gap-x-4'>
         <button
           className=' bg-gradient-to-r from-[#1F1C2C] to-[#6e688b] text-white hover:bg-slate-900/60 px-4 py-1 rounded-lg'
           onClick={() => setShowType('table')}
@@ -43,7 +43,7 @@ const Home = () => {
       </div>
 
       <div className='flex justify-between items-center'>
-        <h1 className='text-3xl my-8'>Books List</h1>
+        <h1 className='text-3xl my-6 sevillana'>Books List</h1>
         <Link to='/books/create'>
           <MdOutlineAddBox className='text-gray-800 hover:opacity-70 text-4xl' />
         </Link>
