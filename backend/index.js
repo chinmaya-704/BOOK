@@ -8,13 +8,10 @@ import cors from 'cors';
 dotenv.config()
 const app = express();
 // const port=process.env.PORT
-// Middleware for parsing request body
+
 app.use(express.json());
 
-// Middleware for handling CORS POLICY
-// Option 1: Allow All Origins with Default of cors(*)
 app.use(cors());
-// Option 2: Allow Custom Origins
 
 
 app.get('/', (request, response) => {
@@ -23,7 +20,6 @@ app.get('/', (request, response) => {
 });
 
 app.use('/books', booksRoute);
-// const DB=process.env.URI
 
 mongoose
   .connect(URI)
