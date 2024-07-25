@@ -62,7 +62,7 @@ const Edit = () => {
       <BackButton />
       <h1 className='text-3xl my-4 sevillana'>Edit Book</h1>
       {loading ? <Spinner /> : ''}
-      <div className='kalam flex flex-col border-2 bg-gradient-to-r from-[#1F1C2C] to-[#6e688b] border-sky-900 rounded-xl w-[600px] p-4 mx-auto'>
+      <div className='kalam flex flex-col border-2 bg-gradient-to-r from-[#1F1C2C] to-[#6e688b] border-sky-900 rounded-xl p-4 mx-auto w-[90vw] md:w-[70vw]'>
         <div className='my-4'>
           <label className='text-xl mr-4 text-gray-300 '>Title</label>
           <input
@@ -101,7 +101,7 @@ const Edit = () => {
             className=' rounded-xl mt-2 px-4 py-2  w-full '
           />
         </div>
-        <button className='p-2 bg-amber-400 hover:bg-amber-300 hover:font-bold text-xl text-white mx-60 rounded-xl mt-2' onClick={handleEditBook}>
+        <button className='p-2 bg-amber-400 hover:bg-amber-300 hover:font-bold text-xl text-white mx-auto px-7 rounded-xl mt-2' onClick={handleEditBook}>
           Save
         </button>
       </div>
