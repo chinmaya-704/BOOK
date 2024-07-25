@@ -29,7 +29,7 @@ const BookModal = ({ book, onClose }) => {
           <h2 className='my-1'>{book.author}</h2>
         </div>
         <p className='mt-4'>Everything You want to show</p>
-        <p className='my-2'>
+        <p className='my-2 overflow-scroll'>
           {book.desc}
         </p>
       </div>
